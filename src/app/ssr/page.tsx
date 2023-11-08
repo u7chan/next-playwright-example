@@ -7,13 +7,13 @@ export default async function Page() {
   const { version, updatedAt } = await data.json()
   return (
     <div>
-      <p>SSR</p>
+      <p className='title'>SSR</p>
       <Link href='/'>Home</Link>
       <div>
-        <span>Next.js: </span> <span>{version}</span>
+        <span>Next.js: </span> <span className='version'>{version}</span>
       </div>
       <div>
-        <span>{new Date(updatedAt).toLocaleString()}</span>
+        <span className='updated-at'>{new Date(updatedAt).toLocaleString()}</span>
       </div>
     </div>
   )
